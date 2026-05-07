@@ -1,5 +1,5 @@
 {% set python_min = "3.11" %}
-{% set VERSION = "2.0.0" %}
+{% set VERSION = "2.0.1" %}
 
 package:
   name: panseg
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kreshuklab/panseg/archive/refs/tags/{{ VERSION }}.tar.gz
-  sha256: e4e868026a1aa32977e7678dd53815c2601e78eadb8c0263a12f752544680f1b
+  sha256: 953c450f58a13f0cc40645a40b48f70ca150a92a52af6bae7259cc5cec974a60
 
 build:
   noarch: python
@@ -33,26 +33,27 @@ requirements:
   run:
     - python >={{ python_min }}
     - pip
-    - pytorch <=2.9.1
-    - tensorboard <=2.20.0
-    - tifffile <=2025.12.12
-    - h5py <=3.151
-    - zarr <=3.1.5
-    - vigra <=1.12.2
-    - python-elf <=0.7.4
-    - python-graphviz <=0.21
-    - scikit-image <=0.25.2
-    - bioimageio.core <=0.9.5
-    - bioimageio.spec <=0.5.6
-    - qtpy <=2.4.3
-    - pyside6 <=6.10.1
-    - napari <=0.6.6
-    - qt-material <=2.14
-    - requests <=2.32.5
-    - pyyaml <=6.0.3
-    - pydantic <=2.11.10
-    - trimesh <=4.11.4
-    - numpy <=2.3.5
+    - bioimageio.core ==0.10.2
+    - bioimageio.spec ==0.5.9.1
+    - h5py ==3.16.0
+    - napari ==0.7.0
+    - pydantic ==2.13.3
+    - pyside6 ==6.11.0
+    - python-elf ==0.7.4
+    - python-graphviz ==0.21
+    - pytorch ==2.10.0
+    - pyyaml ==6.0.3
+    - qt-material ==2.14
+    - qtpy ==2.4.3
+    - requests ==2.33.1
+    - scikit-image ==0.26.0
+    - tensorboard ==2.20.0
+    - tifffile ==2026.3.3
+    - vigra ==1.12.3
+    - trimesh ==4.11.5
+    - numpy ==2.4.3
+    - zarr ==3.1.6
+    - zmesh ==1.11.0
 
 test:
   requires:
